@@ -1,9 +1,9 @@
 <template>
   <time class="clock">
     <span class="clock__hour">{{ hours }}</span><!--
-    --><span class="clock__colon" v-bind:style="{ visibility: (!blink || seconds % 2 === 0) ? 'visible' : 'hidden' }">:</span><!--
+    --><span class="clock__colon" :style="{ visibility: (!blink || seconds % 2 === 0) ? 'visible' : 'hidden' }">:</span><!--
     --><span class="clock__minutes">{{ minutes }}</span><!--
-    --><span class="clock__colon" v-if="displaySeconds" v-bind:style="{ visibility: (!blink || seconds % 2 === 0) ? 'visible' : 'hidden' }">:</span><!--
+    --><span class="clock__colon" v-if="displaySeconds" :style="{ visibility: (!blink || seconds % 2 === 0) ? 'visible' : 'hidden' }">:</span><!--
     --><span v-if="displaySeconds" class="clock__seconds">{{ seconds }}</span><!--
     --><span v-if="twelveHour" class="clock__ampm">{{ amPm }}</span>
   </time>
